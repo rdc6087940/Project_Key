@@ -1,0 +1,26 @@
+$(function(){
+	
+	var img1= $('#dom1');
+	var img2= $('#dom2');
+	var img3= $('#dom3');
+	
+	img1.css("cursor","pointer").click(function(){
+		location.href = 'detail.html';
+	});
+	
+	img1.next()
+	img1.hover(function(){
+		
+	},function(){
+		
+	})
+	
+	img2.css("cursor","pointer").click(function(){
+		location.href = 'detail.html';
+	});
+	
+	img3.css("cursor","pointer").click(function(){
+		location.href = 'detail.html';
+	});
+	
+});

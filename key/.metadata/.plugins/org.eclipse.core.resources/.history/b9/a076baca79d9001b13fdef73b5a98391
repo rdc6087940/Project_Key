@@ -1,0 +1,63 @@
+$(function(){
+	
+	var img1= $('#dom1');
+	var img2= $('#dom2');
+	var img3= $('#dom3');
+	
+	
+	img1.css("cursor","pointer").click(function(){
+		
+		/*$.ajax({
+			url:"/key/detail.jsp",
+			type:'post',
+			data : {"place":"sockcho"},
+			
+			success:function(data){
+	            alert("속초!");
+	        },
+	        error:function(jqXHR, textStatus, errorThrown){
+	            alert("에러 발생~~ \n" + textStatus + " : " + errorThrown);
+	        }*/
+		var newForm = $('<form></form>'); //set attribute (form) 
+		newForm.attr("name","newForm");
+		newForm.attr("method","post"); 
+		newForm.attr("action","detail.jsp"); 
+		newForm.attr("target","_blank"); 
+		// create element & set attribute (input) 
+		newForm.append($('<input/>', {type: 'hidden', name: 'place', value:'속초' }));
+		newForm.append($('<input/>', {type: 'hidden', name: 'price', value:'150000' })); // append form (to body) 
+		newForm.appendTo('body'); // submit form
+		
+		newForm.submt()
+
+		location.href = 'detail.jsp';
+	});
+	img1.next().next().hide();
+	img1.hover(function(){
+		img1.next().next().show(500);
+	},function(){
+		
+	})
+	
+	
+	img2.css("cursor","pointer").click(function(){
+		location.href = 'detail.jsp';
+	});
+	img2.next().next().hide();
+	img2.hover(function(){
+		img2.next().next().show(500);
+	},function(){
+		
+	})
+	
+	img3.css("cursor","pointer").click(function(){
+		location.href = 'detail.jsp';
+	});
+	img3.next().next().hide();
+	img3.hover(function(){
+		img3.next().next().show(500);
+	},function(){
+		
+	})
+	
+});

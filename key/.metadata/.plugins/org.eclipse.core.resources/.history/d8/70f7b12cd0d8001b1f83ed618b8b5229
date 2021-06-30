@@ -1,0 +1,16 @@
+$(function(){
+	
+	
+	let buy=$('#buy');
+	
+	buy.click(function(){
+		location.href = 'end.html';
+	})
+	
+	let btn = $('#notweek');
+	
+	btn.click(function(){
+		$(this).css('background-color','red');
+		/*$(this).css('background-color','#8A6D3B');*/
+	})
+});

@@ -1,0 +1,19 @@
+$(function(){
+	
+	var img1= $('#ove1');
+	var img2= $('#ove2');
+	var img3= $('#ove3');
+	
+	img1.css("cursor","pointer").click(function(){
+		location.href = 'detail.html';
+	});
+	
+	img2.css("cursor","pointer").click(function(){
+		location.href = 'detail.html';
+	});
+	
+	img3.css("cursor","pointer").click(function(){
+		location.href = 'detail.html';
+	});
+	
+});

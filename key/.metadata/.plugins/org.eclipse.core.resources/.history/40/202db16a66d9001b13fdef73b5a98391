@@ -1,0 +1,143 @@
+$(function(){
+	
+	
+	
+	
+	let btn = $('#notweek');
+	let btn2 = $('#week');
+	let ctn = 0;
+	
+	let btn3 = $('#hotel');
+	let btn4 = $('#hhotel');
+	let ctn2 = 0;
+	
+	btn.click(function(){
+		$(this).css('background-color','#8A6D3B');
+		if(ctn==2){
+			btn2.css('background-color','');
+		}
+		ctn=1;
+	});
+	btn2.click(function(){
+		$(this).css('background-color','#8A6D3B');
+		if(ctn==1){
+			btn.css('background-color','');
+		}
+		ctn=2;
+	});
+	
+	
+	btn3.click(function(){
+		$(this).css('background-color','#8A6D3B');
+		if(ctn2==2){
+			btn4.css('background-color','');
+		}
+		ctn2=1;
+	});
+	btn4.click(function(){
+		$(this).css('background-color','#8A6D3B');
+		if(ctn2==1){
+			btn3.css('background-color','');
+		}
+		ctn2=2;
+	});
+	
+	
+// 편이슬 씨 구현 부 - detail 페이지 계산 및 동적할당----------------------------------------------------------------
+	// 버튼 클릭시 금액 누적 합	
+	// 각 버튼의 값을 변수로 지정
+	var notweek = 200;
+	var week = 400;
+	var hotel = 600;
+	var hhotel = 1200;
+	
+	
+	// A. 평일 버튼을 클릭시 ===============================================================================
+	// class가 result인 div에, 변수로 저장한 평일값(notweek) 값을 출력
+	$('#notweek').click(function(){
+		$('.result').text('평일 ' + notweek);
+		
+	// A-1. 호텔 버튼 클릭시
+	// class가 result2인 div에, 변수로 저장한 평일값 + 호텔값을 출력
+	$('#hotel').click(function(){
+		$('.result2').text('평일 '+notweek + ' + ' + '호텔 ' + hotel + ' = ' + (notweek+hotel));
+			
+			// A-1-1. id가 #inputGroupSelect01 select를 클릭시
+			$('#inputGroupSelect01').click(function(){
+				// select 요소의 value(인원수) 값을 변수 count에 저장
+				let count = $('#inputGroupSelect01 option:selected').val();
+				// 평일+호텔 * count값을 변수 result에 저장
+				let result = (notweek+hotel) * count;
+				// name이 totalbox인 input에
+				// value 속성에 result 값을 추가
+				$('input[name=totalbox]').attr('value',result);
+				})		
+			})
+			
+	// A-2. 고급호텔 클릭시
+	// class가 result2인 div에, 변수로 저장한 평일값 + 고급호텔값을 출력
+	$('#hhotel').click(function(){
+		$('.result2').text('평일 '+notweek + ' + ' + '고급호텔 ' + hhotel + ' = ' + (notweek+hhotel));
+				
+			// A-2-1. id가 #inputGroupSelect01 select를 클릭
+			$('#inputGroupSelect01').click(function(){
+				// select 요소의 value(인원수) 값을 변수 count에 저장
+				let count = $('#inputGroupSelect01 option:selected').val();
+				// 평일+고급호텔 * count값을 변수 result에 저장
+				let result = (notweek+hhotel) * count;
+				$('input[name=totalbox]').attr('value',result);
+				})
+			})		
+	});
+	
+	// B. 주말 버튼을 클릭시 ===============================================================================
+	// class가 result인 div에, 변수로 저장한 주말값(week) 값을 출력
+	$('#week').click(function(){
+		$('.result').text('주말' + week);
+		
+	// B-1. 호텔 클릭시
+	// class가 result2인 div에, 변수로 저장한 주말값 + 호텔값을 출력
+	$('#hotel').click(function(){
+		$('.result2').text('주말 '+week + ' + ' + '호텔 ' + hotel + ' = ' + (week+hotel));
+			
+			// B-1-1. id가 #inputGroupSelect01 select를 클릭
+			$('#inputGroupSelect01').click(function(){
+				// select 요소의 value(인원수) 값을 변수 count에 저장
+				let count = $('#inputGroupSelect01 option:selected').val();
+				// 주말+호텔 * count값을 변수 result에 저장
+				let result = (week+hotel) * count;
+				$('input[name=totalbox]').attr('value',result);
+				})
+			})
+			
+	// B-2. 고급호텔 클릭시
+	// class가 result2인 div에, 변수로 저장한 주말값 + 고급호텔값을 출력
+	$('#hhotel').click(function(){
+		$('.result2').text('주말 '+week + ' + ' + '고급호텔 ' + hhotel + ' = ' + (week+hhotel));
+				
+			// B-2-1. id가 #inputGroupSelect01 select를 클릭
+			$('#inputGroupSelect01').click(function(){
+				// select 요소의 value(인원수) 값을 변수 count에 저장
+				let count = $('#inputGroupSelect01 option:selected').val();
+				// 주말+고급호텔 * count값을 변수 result에 저장
+				let result = (week+hhotel) * count;
+				$('input[name=totalbox]').attr('value',result);
+				})			
+			})
+		});
+// 편이슬 씨 구현부 end ---------------------------------------------------------------------------------
+	
+let buy=$('#buy');
+	let ctn3 = $('#inputGroupSelect01 option:selected').val();
+	buy.click(function(){
+		if(ctn==0 || ctn2==0 || ctn3==0)
+		{
+			alert('결제 정보를 전부 입력해주세요.')
+		}
+		else{
+			location.href = 'end.html';
+		}
+		
+		
+	})
+});
