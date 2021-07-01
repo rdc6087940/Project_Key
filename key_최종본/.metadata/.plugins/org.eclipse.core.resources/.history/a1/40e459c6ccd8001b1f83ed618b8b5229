@@ -1,0 +1,9 @@
+$(function(){
+	
+	
+	let buy=$('#home');
+	
+	buy.click(function(){
+		location.href = 'index.html';
+	})
+});

@@ -1,0 +1,15 @@
+$(function(){
+	
+	
+	let buy=$('#buy');
+	
+	buy.click(function(){
+		location.href = 'end.html';
+	})
+	
+	let btn = $('.btn');
+	
+	btn.click(function(){
+		$(this).css('background-color','yellow');
+	})
+});

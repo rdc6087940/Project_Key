@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/index.css">
+    <title>키오스크 프로젝트</title>
+    
+     <script src='./lib/jquery-3.1.1.min.js' type="text/javascript"></script>
+</head>
+
+<body>
+<!-- nav--------------------------------------------------------------------- -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ml-auto" >
+        <a class="navbar-brand text-warning" href="index.jsp">Band us</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active ml-3">
+              <a class="nav-link text-warning" href="home.jsp">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item  ml-3" >
+              <a class="nav-link text-warning" href="#">Song</a>
+            </li>
+            
+            <li class="nav-item  ml-3" >
+              <a class="nav-link text-warning" href="#">Community</a>
+            </li>
+            <li class="nav-item active ml-3">
+              <a class="nav-link text-warning" href="postSong.jsp">Post Song <span class="sr-only">(current)</span></a>
+            </li>
+            
+
+            <li class="nav-item  ml-3" >
+              <a class="nav-link text-warning" href="login.jsp">Community</a>
+            </li>
+            <li class="nav-item active ml-3">
+              <a class="nav-link text-warning" href="login.jsp">Post Song <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item dropdown  ml-3">
+              <a class="nav-link dropdown-toggle text-warning" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Rank
+              </a>
+              <div class="dropdown-menu  ml-3" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Top 10</a>
+                <a class="dropdown-item" href="#">New Songs</a>
+                <a class="dropdown-item" href="#">Hot Artist</a>
+                <a class="dropdown-item" href="#">Category</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">My favorite</a>
+              </div>
+            </li>
+
+
+    			
+    		
+    		
+             <button type="button" class="btn btn-outline-warning ml-3 mr-5" onclick="location.href='login.jsp'">Login</button>
+
+          </li>
+          
+          </ul>
+        </div>
+      </nav>
+<!-- --------------------------------------------------------------------- -->
+
+
+
+
+
+
+<!-- --------------------------------------------------------------------- -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+     
+
+    
+</body>
+
+</html>

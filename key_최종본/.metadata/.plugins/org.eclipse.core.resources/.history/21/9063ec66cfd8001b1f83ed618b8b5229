@@ -1,0 +1,15 @@
+$(function(){
+	
+	
+	let buy=$('#buy');
+	
+	buy.click(function(){
+		location.href = 'end.html';
+	})
+	
+	let btn = $('.btn-outline-warning');
+	
+	btn.click(function(){
+		$(this).css('background-color','yellow');
+	})
+});

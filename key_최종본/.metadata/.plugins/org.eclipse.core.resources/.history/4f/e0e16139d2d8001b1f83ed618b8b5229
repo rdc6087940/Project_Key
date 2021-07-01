@@ -1,0 +1,33 @@
+$(function(){
+	
+	
+	let buy=$('#buy');
+	
+	buy.click(function(){
+		location.href = 'end.html';
+	})
+	
+	let btn = $('#notweek');
+	let btn2 = $('#week');
+	let ctn = 0;
+	
+	let btn3 = $('#hotel');
+	let btn4 = $('#hhotel');
+	let ctn2 = 0;
+	
+	btn3.click(function(){
+		$(this).css('background-color','#8A6D3B');
+		if(ctn2==2){
+			btn4.css('background-color','');
+		}
+		ctn2=1;
+	});
+	btn4.click(function(){
+		$(this).css('background-color','#8A6D3B');
+		if(ctn2==1){
+			btn3.css('background-color','');
+		}
+		ctn2=2;
+	});
+	
+});
